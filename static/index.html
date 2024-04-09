@@ -14,94 +14,92 @@
     <form action="/pets/orders" method="POST">
         <div>
             <label>
-                Тип животного
-                <input type="text" name="petType" placeholder="Собака">
+                Тип животного: <br>
+                <input type="radio" name="petType" value="cat" required checked> Кот <br>
+            </label>
+            <label>
+                <input type="radio" name="petType" value="dog"> Собака <br>
+            </label>
+            <label>
+                <input type="radio" name="petType" value="tiger"> Тихр <br>
             </label>
         </div>
 
-        <div>
-            <label>
-                Цвет глаз: <br>
-                <input type="radio" name="eyeColor" value="blue" required> Голубые <br>
-            </label>
-        </div>
-
-        <div>
-            <label>
-                <input type="radio" name="eyeColor" value="green"> Зеленые <br>
-            </label>
-            <label>
-                <input type="radio" name="eyeColor" value="brown"> Карие <br>
-            </label>
-            <label>
-                <input type="radio" name="eyeColor" value="yellow"> Желтые <br>
-            </label>
-        </div>
-
-        <div>
-            <label>
-                Ваше имя
-                <input type="text" name="name" placeholder="Наташа">
-            </label>
-        </div>
-        <div>
-            <label>
-                Почта:
-                <input type="email" name="email" placeholder="owner@email.ru">
-            </label>
-        </div>
-
-        <div>
-            <label>
-                <input type="checkbox" name="rules" checked>
-                Я согласен с условиями и готов продать душу дьяволу
-            </label>
-        </div>
-        <input type="submit" value="ОТПРАВЛЯЙТЕ">
         <label>
             Gender: <br>
 
             <label>
-                <input type="radio" name="gender" value="male">
-                male
+                <input type="radio" name="gender" value="boy">
+                boy
             </label>
 
             <label>
-                <input type="radio" name="gender" value="female">
-                female
+                <input type="radio" name="gender" value="girl">
+                girl
             </label>
 
             <label>
-                <input type="radio" name="gender" value="unknown" required checked>
-                unknown
+                <input type="radio" name="gender" value="none" required checked>
+                none
             </label>
         </label>
 
         <div>
             <label>
+                Цвет глаз: <br>
+                <input type="color" name="eyeColor" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
                 Длина хвоста
-                <input type="number" name="tailLength" value = 100 required></input> см
+                <input type="number" name="tailLength" value = 100 required> см
+            </label>
+        </div>
+
+
+        <div>
+            <label>
+                Ваше имя
+                <input type="text" name="name" value="Наташа">
             </label>
         </div>
 
         <div>
             <label>
                 Дата рождения вас?
-                <input type="datetime-local" name="dateOfBirth" required>
+                <input type="date" name="dateOfBirth" required value="2050-04-12">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Почта:
+                <input type="email" name="email" value="owner@email.ru">
             </label>
         </div>
 
         <div>
             <label>
                 Контактный телефон питомца
-                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" value="666-666-66-66">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" name="rules" value="true" checked>
+                I accept Jesus as my personal lord and savior
             </label>
         </div>
 
         <p>
             <input type="submit" value="ОТПРАВЛЯЙТЕ">
         </p>
-
+        <p>
+            <input type="reset" value="СБРОС">
+        </p>
     </form>
 
 </main>
