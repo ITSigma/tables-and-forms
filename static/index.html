@@ -12,8 +12,52 @@
     <!--Форму размещай тут-->
 
     <form action="/pets/orders" method="POST">
-        <input type="submit" value="ОТПРАВЛЯЙТЕ">
+        <div>
+            <label>
+                Тип животного
+                <input type="text" name="petType" placeholder="Собака">
+            </label>
+        </div>
 
+        <div>
+            <label>
+                Цвет глаз: <br>
+                <input type="radio" name="eyeColor" value="blue" required> Голубые <br>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="radio" name="eyeColor" value="green"> Зеленые <br>
+            </label>
+            <label>
+                <input type="radio" name="eyeColor" value="brown"> Карие <br>
+            </label>
+            <label>
+                <input type="radio" name="eyeColor" value="yellow"> Желтые <br>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Ваше имя
+                <input type="text" name="name" placeholder="Наташа">
+            </label>
+        </div>
+        <div>
+            <label>
+                Почта:
+                <input type="email" name="email" placeholder="owner@email.ru">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" name="rules" checked>
+                Я согласен с условиями и готов продать душу дьяволу
+            </label>
+        </div>
+        <input type="submit" value="ОТПРАВЛЯЙТЕ">
     </form>
 
 </main>
